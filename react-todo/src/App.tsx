@@ -1,5 +1,12 @@
-import React from "react"
+import { ProvideTodoContext } from "contexts/todo"
+import { NewTodo, TodoList } from "todo"
 
 export const App = () => {
-	return <h1>Hello world</h1>
+	return (
+		<ProvideTodoContext>
+			<h1>Todo list</h1>
+			<NewTodo />
+			<TodoList />
+		</ProvideTodoContext>
+	)
 }
